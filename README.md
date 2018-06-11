@@ -226,6 +226,7 @@ defaults write com.apple.finder NewWindowTargetPath -string "file:///full/path/h
 defaults write com.apple.finder NewWindowTarget -string "PfDe"
 defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Desktop/"
 ```
+---
 
 #### Show hidden files:
 
@@ -262,21 +263,21 @@ killall Finder
 
 #### Expand File Info panes:
 
-Expand "General":
+##### Expand "General":
 
 ```bash
 defaults write com.apple.finder FXInfoPanesExpanded -dict General -bool true
 killall Finder
 ```
 
-Expand "Open with":
+##### Expand "Open with":
 
 ```bash
 defaults write com.apple.finder FXInfoPanesExpanded -dict OpenWith -bool true
 killall Finder
 ```
 
-Expand "Privileges":
+##### Expand "Privileges":
 
 ```bash
 defaults write com.apple.finder FXInfoPanesExpanded -dict Privileges -bool true
@@ -286,28 +287,28 @@ killall Finder
 
 #### Set default view in all Finder windows by default:
 
-Set list view:
+##### Set list view:
 
 ```bash
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 killall Finder
 ```
 
-Set icon view:
+##### Set icon view:
 
 ```bash
 defaults write com.apple.finder FXPreferredViewStyle -string "icnv"
 killall Finder
 ```
 
-Set column view:
+##### Set column view:
 
 ```bash
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 killall Finder
 ```
 
-Set Cover FLow view:
+##### Set Cover FLow view:
 
 ```bash
 defaults write com.apple.finder FXPreferredViewStyle -string "Flwv"
@@ -531,31 +532,31 @@ killall SystemUIServer
 
 #### Set screenshot format:
 
-Save screenshot as BMP:
+##### Save screenshot as BMP:
 
 ```bash
 defaults write com.apple.screencapture type -string "bmp"
 ```
 
-Save screenshot as JPG:
+##### Save screenshot as JPG:
 
 ```bash
 defaults write com.apple.screencapture type -string "jpg"
 ```
 
-Save screenshot as PDF:
+##### Save screenshot as PDF:
 
 ```bash
 defaults write com.apple.screencapture type -string "pdf"
 ```
 
-Save screenshot as TIFF:
+##### Save screenshot as TIFF:
 
 ```bash
 defaults write com.apple.screencapture type -string "tiff"
 ```
 
-Save screenshot as PNG (default):
+##### Save screenshot as PNG (default):
 
 ```bash
 defaults write com.apple.screencapture type -string "png"
@@ -566,19 +567,19 @@ defaults write com.apple.screencapture type -string "png"
 
 #### Scrollbar visibility:
 
-Always show scrollbars:
+##### Always show scrollbars:
 
 ```bash
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 ```
 
-Show scrollbars on scroll:
+##### Show scrollbars on scroll:
 
 ```bash
 defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 ```
 
-Automatic mode:
+##### Automatic mode:
 
 ```bash
 defaults write NSGlobalDomain AppleShowScrollBars -string "Automatic"
@@ -594,13 +595,13 @@ defaults write NSGlobalDomain NSScrollAnimationEnabled -bool false
 
 #### Windows:
 
-Disable animations when opening and closing windows:
+##### Disable animations when opening and closing windows:
 
 ```bash
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 ```
 
-Accelerated playback when adjusting the window size (Cocoa applications):
+##### Accelerated playback when adjusting the window size (Cocoa applications):
 
 ```bash
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
@@ -634,13 +635,13 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 #### Add info to login screen:
 
-Show basic system info on login screen:
+##### Show basic system info on login screen:
 
 ```bash
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 ```
 
-Add a message to login screen:
+##### Add a message to login screen:
 
 ```bash
 sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Live Long & Prosper"
@@ -779,81 +780,81 @@ defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int
 
 #### Safari:
 
-Privacy: don’t send search queries to Apple:
+##### Privacy: don’t send search queries to Apple:
 
 ```bash
 defaults write com.apple.Safari UniversalSearchEnabled -bool false
 defaults write com.apple.Safari SuppressSearchSuggestions -bool true
 ```
 
-Press Tab to highlight each item on a web page:
+##### Press Tab to highlight each item on a web page:
 
 ```bash
 defaults write com.apple.Safari WebKitTabToLinksPreferenceKey -bool true
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2TabsToLinks -bool true
 ```
 
-Show the full URL in the address bar:
+##### Show the full URL in the address bar:
 
 ```bash
 defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
 ```
 
-Set home page to `about:blank` for faster loading:
+##### Set home page to `about:blank` for faster loading:
 
 ```bash
 defaults write com.apple.Safari HomePage -string "about:blank"
 ```
 
-Prevent Safari from opening ‘safe’ files automatically after downloading:
+##### Prevent Safari from opening ‘safe’ files automatically after downloading:
 
 ```bash
 defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
 ```
 
-Allow using Backspace key to go to the previous page in history:
+##### Allow using Backspace key to go to the previous page in history:
 
 ```bash
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled -bool true
 ```
 
-Hide bookmarks bar by default:
+##### Hide bookmarks bar by default:
 
 ```bash
 defaults write com.apple.Safari ShowFavoritesBar -bool false
 ```
 
-Remove useless icons from bookmarks bar:
+##### Remove useless icons from bookmarks bar:
 
 ```bash
 defaults write com.apple.Safari ProxiesInBookmarksBar "()"
 ```
 
-Hide sidebar in Top Sites:
+##### Hide sidebar in Top Sites:
 
 ```bash
 defaults write com.apple.Safari ShowSidebarInTopSites -bool false
 ```
 
-Disable thumbnail cache for History and Top Sites:
+##### Disable thumbnail cache for History and Top Sites:
 
 ```bash
 defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
 ```
 
-Make Safari’s search banners default to Contains instead of Starts With:
+##### Make Safari’s search banners default to Contains instead of Starts With:
 
 ```bash
 defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
 ```
 
-Enable debug menu:
+##### Enable debug menu:
 
 ```bash
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 ```
 
-Enable the Develop menu and the Web Inspector:
+##### Enable the Develop menu and the Web Inspector:
 
 ```bash
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
@@ -861,74 +862,74 @@ defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool 
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
 ```
 
-Add a context menu item for showing the Web Inspector in web views:
+##### Add a context menu item for showing the Web Inspector in web views:
 
 ```bash
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 ```
 
-Enable continuous spellchecking:
+##### Enable continuous spellchecking:
 
 ```bash
 defaults write com.apple.Safari WebContinuousSpellCheckingEnabled -bool true
 ```
 
-Disable auto-correct:
+##### Disable auto-correct:
 
 ```bash
 defaults write com.apple.Safari WebAutomaticSpellingCorrectionEnabled -bool false
 ```
 
-Disable autofill from Adress Book:
+##### Disable autofill from Adress Book:
 
 ```bash
 defaults write com.apple.Safari AutoFillFromAddressBook -bool false
 ```
 
-Disable autofill of passwords:
+##### Disable autofill of passwords:
 
 ```bash
 defaults write com.apple.Safari AutoFillPasswords -bool false
 ```
 
-Disable autofill of credit card data:
+##### Disable autofill of credit card data:
 
 ```bash
 defaults write com.apple.Safari AutoFillCreditCardData -bool false
 ```
 
-Disable autofill of miscellaneous forms:
+##### Disable autofill of miscellaneous forms:
 
 ```bash
 defaults write com.apple.Safari AutoFillMiscellaneousForms -bool false
 ```
 
-Warn about fraudulent websites:
+##### Warn about fraudulent websites:
 
 ```bash
 defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool true
 ```
 
-Block pop-up windows:
+##### Block pop-up windows:
 
 ```bash
 defaults write com.apple.Safari WebKitJavaScriptCanOpenWindowsAutomatically -bool false
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaScriptCanOpenWindowsAutomatically -bool false
 ```
 
-Enable “Do Not Track”:
+##### Enable “Do Not Track”:
 
 ```bash
 defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
 ```
 
-Update extensions automatically:
+##### Update extensions automatically:
 
 ```bash
 defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 ```
 
-Disable the standard delay in rendering a Web page:
+##### Disable the standard delay in rendering a Web page:
 
 ```bash
 defaults write com.apple.Safari WebKitInitialTimedLayoutDelay 0.25
@@ -937,26 +938,26 @@ defaults write com.apple.Safari WebKitInitialTimedLayoutDelay 0.25
 
 #### Mail:
 
-Disable send and reply animations:
+##### Disable send and reply animations:
 
 ```bash
 defaults write com.apple.mail DisableReplyAnimations -bool true
 defaults write com.apple.mail DisableSendAnimations -bool true
 ```
 
-Copy email addresses as `foo@bar.com` instead of `Foo Bar <foo@bar.com>`:
+##### Copy email addresses as `foo@bar.com` instead of `Foo Bar <foo@bar.com>`:
 
 ```bash
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 ```
 
-Activate shortcut `⌘ + Enter` to send email:
+##### Activate shortcut `⌘ + Enter` to send email:
 
 ```bash
 defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\U21a9"
 ```
 
-Display emails in threaded mode, sorted by date (oldest at the top):
+##### Display emails in threaded mode, sorted by date (oldest at the top):
 
 ```bash
 defaults write com.apple.mail DraftsViewerAttributes -dict-add "DisplayInThreadedMode" -string "yes"
@@ -964,13 +965,13 @@ defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortedDescending
 defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -string "received-date"
 ```
 
-Disable inline attachments (just show the icons):
+##### Disable inline attachments (just show the icons):
 
 ```bash
 defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
 ```
 
-Disable automatic spell checking:
+##### Disable automatic spell checking:
 
 ```bash
 defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnabled"
@@ -979,7 +980,7 @@ defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnab
 
 #### iTerm 2:
 
-Disable the annoying prompt when quitting iTerm:
+##### Disable the annoying prompt when quitting iTerm:
 
 ```bash
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
@@ -988,13 +989,13 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 #### Time Machine:
 
-Prevent Time Machine from prompting to use new hard drives as backup volume:
+##### Prevent Time Machine from prompting to use new hard drives as backup volume:
 
 ```bash
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 ```
 
-Disable local Time Machine backups:
+##### Disable local Time Machine backups:
 
 ```bash
 hash tmutil &> /dev/null && sudo tmutil disablelocal
@@ -1003,24 +1004,25 @@ hash tmutil &> /dev/null && sudo tmutil disablelocal
 
 #### Activity Monitor:
 
-Show the main window when launching Activity Monitor:
+##### Show the main window when launching Activity Monitor:
 
 ```bash
 defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
 ```
 
-Visualize CPU usage in the Activity Monitor Dock icon:
+##### Visualize CPU usage in the Activity Monitor Dock icon:
 
 ```bash
 defaults write com.apple.ActivityMonitor IconType -int 5
 ```
 
-Show all processes in Activity Monitor:
+##### Show all processes in Activity Monitor:
+
 ```bash
 defaults write com.apple.ActivityMonitor ShowCategory -int 0
 ```
 
-Sort Activity Monitor results by CPU usage:
+##### Sort Activity Monitor results by CPU usage:
 
 ```bash
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
@@ -1030,7 +1032,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 #### Address Book:
 
-Enable the debug menu in Address Book:
+##### Enable the debug menu in Address Book:
 
 ```bash
 defaults write com.apple.addressbook ABShowDebugMenu -bool true
@@ -1039,13 +1041,13 @@ defaults write com.apple.addressbook ABShowDebugMenu -bool true
 
 #### TextEdit:
 
-Use plain text mode for new TextEdit documents:
+##### Use plain text mode for new TextEdit documents:
 
 ```bash
 defaults write com.apple.TextEdit RichText -int 0
 ```
 
-Open and save files as UTF-8 in TextEdit:
+##### Open and save files as UTF-8 in TextEdit:
 
 ```bash
 defaults write com.apple.TextEdit PlainTextEncoding -int 4
@@ -1054,7 +1056,7 @@ defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 
 #### Disk Utility:
 
-Enable the debug menu in Disk Utility:
+##### Enable the debug menu in Disk Utility:
 
 ```bash
 defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true`<br>`$ defaults write com.apple.DiskUtility advanced-image-options -bool true
@@ -1063,55 +1065,55 @@ defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true`<br>`$ defaul
 
 #### Mac App Store:
 
-Enable the WebKit Developer Tools in the Mac App Store:
+##### Enable the WebKit Developer Tools in the Mac App Store:
 
 ```bash
 defaults write com.apple.appstore WebKitDeveloperExtras -bool true
 ```
 
-Enable Debug Menu in the Mac App Store:
+##### Enable Debug Menu in the Mac App Store:
 
 ```bash
 defaults write com.apple.appstore ShowDebugMenu -bool true
 ```
 
-Enable the automatic update check:
+##### Enable the automatic update check:
 
 ```bash
 defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
 ```
 
-Check for software updates daily instead of weekly:
+##### Check for software updates daily instead of weekly:
 
 ```bash
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 ```
 
-Download newly available updates in background:
+##### Download newly available updates in background:
 
 ```bash
 defaults write com.apple.SoftwareUpdate AutomaticDownload -int 1
 ```
 
-Install System data files & security updates:
+##### Install System data files & security updates:
 
 ```bash
 defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
 ```
 
-Automatically download apps purchased on other Macs:
+##### Automatically download apps purchased on other Macs:
 
 ```bash
 defaults write com.apple.SoftwareUpdate ConfigDataInstall -int 1
 ```
 
-Turn on app auto-update:
+##### Turn on app auto-update:
 
 ```bash
 defaults write com.apple.commerce AutoUpdate -bool true
 ```
 
-Allow the App Store to reboot machine on macOS updates:
+##### Allow the App Store to reboot machine on macOS updates:
 
 ```bash
 defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
@@ -1120,7 +1122,7 @@ defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
 
 #### Photos:
 
-Prevent Photos from opening automatically when devices are plugged in:
+##### Prevent Photos from opening automatically when devices are plugged in:
 
 ```bash
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
@@ -1129,28 +1131,28 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 #### Google Chrome & Google Chrome Canary:
 
-Disable backswipe on trackpads:
+##### Disable backswipe on trackpads:
 
 ```bash
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
 ```
 
-Disable backswipe on Magic Mouse:
+##### Disable backswipe on Magic Mouse:
 
 ```bash
 defaults write com.google.Chrome AppleEnableMouseSwipeNavigateWithScrolls -bool false
 defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls -bool false
 ```
 
-Use the system-native print preview dialog:
+##### Use the system-native print preview dialog:
 
 ```bash
 defaults write com.google.Chrome DisablePrintPreview -bool true
 defaults write com.google.Chrome.canary DisablePrintPreview -bool true
 ```
 
-Expand the print dialog by default:
+##### Expand the print dialog by default:
 
 ```bash
 defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
