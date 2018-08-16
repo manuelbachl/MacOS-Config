@@ -110,3 +110,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Load syntax highlighting plugin
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Include custom stuff
+source $HOME/aliases/_aliases.sh;
